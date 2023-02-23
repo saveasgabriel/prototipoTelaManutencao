@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap');
+
+:root {
+    --cor-cabecalho: #37517ee6;
+    --cor-primaria: #ffff;
+    --cor-secundaria: black;
+    --font-cabecalho: 'Jost', sans-serif;
+    --radius-border: 0.2rem;
+  }
+
+.titulo-seletores {
+    font-family: var(--font-cabecalho);
+    text-align: center;
+}
+
+.input {
+    height: 2.5rem;
+    width: 12.5rem;
+    background-color: gainsboro;
+    padding: 0px 2px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: var(--radius-border);
+    outline: none;
+    font-family: var(--font-cabecalho);
+    text-align: center;
+    display: block;
+}
+::-webkit-input-placeholder{color:darkgrey}
+
+.dropDown {
+    width: 12.5rem;
+    background-color: gainsboro;
+    border-radius: var(--radius-border);
+    margin-top: 5px;
+    height: 90px;
+    overflow: auto;
+    font-family: var(--font-cabecalho);
+    display: none;
+    border: none;
+    transition: .5s;
+    transform: translate(0px, -10px);
+}
+::-webkit-scrollbar{
+  background-color: silver;
+  width: 10px;
+  border-top-right-radius: var(--radius-border);
+  border-bottom-right-radius: var(--radius-border);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: var(--radius-border);
+}
+
+.item {
+  height: 30px;
+  padding: 0px 5px;
+  box-sizing: border-box;
+  transition: .2s;
+  cursor: pointer;
+  font-size: 0.6rem;
+}
+
+.item:hover{
+  background-color: silver;
+  padding-left: 5px;
+}

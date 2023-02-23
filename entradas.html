@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/seletor.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada de Produção</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <section class="cabecalho__itens">
+            <img class="logo" src="./img/ic_logo_friboi_header_dark.png" alt="logo friboi">
+            <a class="button" href="index.html">Home</a>
+        </section>
+    </header>
+    <main class="principal">
+        <h1 class="principal__titulo">Entrada de Produção</h1>
+        <div class="botoes-seletores">
+            <div class="container">
+                <label for="" class="titulo-seletores">Planta: 
+                    <input type="text" name="planta" placeholder="SELECIONE UMA PLANTA..." class="input" 
+                    onFocus="dropdown(0, 0)" onBlur="dropdown(1, 0, 'planta')"/>
+                </label>
+                <div class="dropDown">
+                    <div class="listDropDown">
+                        <div class="item" id="pdp-1" onMouseDown="category('pdp-1','planta')">PDP</div>
+                        <div class="item" id="ara-2" onMouseDown="category('ara-2','planta')">ARA</div>
+                        <div class="item" id="itb-3" onMouseDown="category('itb-3','planta')">ITB</div>
+                        <div class="item" id="bar-4" onMouseDown="category('bar-4','planta')">BAR</div>
+                        <div class="item" id="mzl-5" onMouseDown="category('mzl-5','planta')">MZL</div>
+                        <div class="item" id="dmt-6" onMouseDown="category('dmt-6','planta')">DMT</div>
+                        <div class="item" id="itr-7" onMouseDown="category('itr-7','planta')">ITR</div>
+                        <div class="item" id="vha-8" onMouseDown="category('vha-8','planta')">VHA</div>
+                        <div class="item" id="lin-9" onMouseDown="category('lin-9','planta')">LIN</div>
+                        <div class="item" id="gyn-10" onMouseDown="category('gyn-10','planta')">GYN</div>
+                    </div>
+                </div>   
+            </div>
+
+            <div class="container">
+                <label for="" class="titulo-seletores">Modalidades de desossa: 
+                    <input type="text" name="desossa" placeholder="SELECIONE UMA OPÇÃO..." class="input" 
+                        onFocus="dropdown(0, 1)" onBlur="dropdown(1, 1, 'desossa')"/>
+                </label>
+                <div class="dropDown">
+                    <div class="listDropDown">
+                        <div class="item" id="desossa-48-q24h-m48h" onMouseDown="category('desossa-48-q24h-m48h','desossa')">48H; QUEBRA 24H; MAT. 24H</div>
+                        <div class="item" id="desossa-48-m24h-q48h" onMouseDown="category('desossa-48-m24h-q48h','desossa')">48H; MAT. 24H; QUEBRA 24H</div>
+                        <div class="item" id="desossa-48h" onMouseDown="category('desossa-48h','desossa')">SOMENTE 48H</div>
+                        <div class="item" id="desossa-24h" onMouseDown="category('desossa-24h','desossa')">SOMENTE 24H</div>
+                    </div>
+                </div>   
+            </div>
+    
+            <div class="container">
+                <label for="" class="titulo-seletores">Há quebra prevista? 
+                    <input type="text" name="quebra" placeholder="SELECIONE UMA OPÇÃO..." class="input" 
+                        onFocus="dropdown(0, 2)" onBlur="dropdown(1, 2, 'quebra')"/>
+                </label>
+                <div class="dropDown">
+                    <div class="listDropDown">
+                        <div class="item" id="quebra-sim" onMouseDown="category('quebra-sim','quebra')">SIM</div>
+                        <div class="item" id="quebra-nao" onMouseDown="category('quebra-nao','quebra')">NÃO</div>
+                    </div>
+                </div>   
+            </div>
+
+            <div class="container">
+                <label for="" class="titulo-seletores">Sequência da quebra: 
+                    <input type="text" name="sequenciaquebra" placeholder="SELECIONE UMA OPÇÃO..." class="input" 
+                        onFocus="dropdown(0, 3)" onBlur="dropdown(1, 3, 'sequenciaquebra')"/>
+                </label>
+                <div class="dropDown">
+                    <div class="listDropDown">
+                        <div class="item" id="sequenciaquebra-1-camara" onMouseDown="category('sequenciaquebra-1-camara','sequenciaquebra')">1° Câmara</div>
+                        <div class="item" id="sequenciaquebra-2-camara" onMouseDown="category('sequenciaquebra-2-camara','sequenciaquebra')">2° Câmara</div>
+                        <div class="item" id="sequenciaquebra-3-camara" onMouseDown="category('sequenciaquebra-3-camara','sequenciaquebra')">3° Câmara</div>
+                        <div class="item" id="sequenciaquebra-4-camara" onMouseDown="category('sequenciaquebra-4-camara','sequenciaquebra')">4° Câmara</div>
+                    </div>
+                </div>   
+            </div>
+
+            <div class="container">
+                <label for="" class="titulo-seletores">Usar datas avançadas? 
+                    <input type="text" name="datavelha" placeholder="SELECIONE UMA OPÇÃO..." class="input" 
+                        onFocus="dropdown(0, 4)" onBlur="dropdown(1, 4, 'datavelha')"/>
+                </label>
+                <div class="dropDown">
+                    <div class="listDropDown">
+                        <div class="item" id="datavelha-sim" onMouseDown="category('datavelha-nao','datavelha')">SIM</div>
+                        <div class="item" id="datavelha-nao" onMouseDown="category('datavelha-nao','datavelha')">NÃO</div>
+                    </div>
+                </div>   
+            </div>
+
+            <div class="container">
+                <label for="" class="titulo-seletores">Meta da desossa: 
+                    <input type="text" name="meta-desossa" placeholder="DETERMINE UM VALOR..." class="input">
+                </label>
+            </div>
+            <script src="./js/seletor.js"></script>
+        </div>
+        
+        
+        <table class="tabela">
+            <tr>
+                <th class ="colunas__principais" colspan="2">Abate</th>
+                <th class ="colunas__principais" colspan="2">Câmaras</th>
+                <th class ="colunas__principais" colspan="5">Habilitação</th>
+                <th class ="colunas__principais" colspan="7">Tipificação</th>
+                <th class ="colunas__principais" colspan="7">Média</th>
+            </tr>
+            <tr class ="colunas__secundarias">
+                <div class="abate">
+                    <th>Sequência</th>
+                    <th>Rastreabilidade</th>
+                </div>
+                <div class="camaras">
+                    <th>N° Câmara</th>
+                    <th>Qtd Peças</th>
+                </div>
+                <div class="habilitacao">
+                    <th>UCH</th>
+                    <th>UE</th>
+                    <th>CNH</th>
+                    <th>UE</th>
+                    <th>PSR-MI</th> 
+                </div>
+                <div class="tipificacao">
+                    <th>Até 2=</th>
+                    <th>2+</th>
+                    <th>3-</th>
+                    <th>3=</th>
+                    <th>3+</th>
+                    <th>4</th>
+                    <th>5</th>
+                </div>
+                <div>
+                    <th>Peso</th>
+                </div>
+            </tr>
+            <tr class="dados__tabela">
+                <td>01</td>
+                <td>10/02/2022</td>
+                <td>CM-02</td>
+                <td>100</td>
+                <td>100</td>
+                <td>160</td>
+                <td>100</td>
+                <td>160</td>
+                <td>160</td>
+                <td>30</td>
+                <td>100</td>
+                <td>15</td>
+                <td></td>
+                <td></td>
+                <td>5</td>
+                <td>10</td>
+                <td>160.45 kg</td>
+            </tr>
+          </table>   
+    </main>
+    <footer></footer>
+</body>
+</html>
